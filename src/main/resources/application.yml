@@ -1,5 +1,11 @@
 server:
   port: 8090
+  servlet:
+    encoding:
+      charset: utf-8
+      force: true
+      enabled: true
+
 
 spring:
   datasource:
@@ -19,6 +25,11 @@ spring:
         format_sql: true
   logging.level:
     org.hibernate.SQL: debug
+  thymeleaf:
+    cache: false
+    prefix: classpath:/templates/
+    suffix: .html
+
 
 management:
   info:
@@ -30,3 +41,4 @@ management:
     web:
       exposure:
         include: "*"
+
