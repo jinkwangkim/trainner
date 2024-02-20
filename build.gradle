@@ -3,6 +3,12 @@ plugins {
 	id 'org.springframework.boot' version '3.2.2'
 	id 'io.spring.dependency-management' version '1.1.4'
 	id 'groovy'
+	id 'war'
+}
+
+bootWar{                        //bootWar Task시 이름 지정
+	archiveBaseName="ROOT"
+	archiveVersion=""
 }
 
 group = 'com.interview'
@@ -35,6 +41,7 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-validation'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+	providedRuntime("org.springframework.boot:spring-boot-starter-tomcat")
 //	implementation 'org.springframework.cloud:spring-cloud-starter-circuitbreaker-resilience4j'
 
 	compileOnly 'org.projectlombok:lombok'
