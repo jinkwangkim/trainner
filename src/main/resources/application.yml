@@ -42,3 +42,9 @@ management:
       exposure:
         include: "*"
 
+
+com:
+  example:
+    ex8_fileupload:
+      upload:
+        path: /Users/areumyang/IdeaProjects/trainner
